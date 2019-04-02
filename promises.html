@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    var promise=new Promise((resolve,reject)=>{
+    if(true){
+        resolve("Iam Resolved");
+    }else{
+        reject("It's Rejected");
+    }
+})
+promise.then(result=>{
+    console.log(result);
+}).catch(err=>{
+    console.log(err);
+});
+console.log("look first");
+    </script>
+</body>
+</html>

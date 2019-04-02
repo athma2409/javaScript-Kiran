@@ -1,0 +1,104 @@
+<script>
+
+    //Classes
+    class Person {
+        constructor() {
+            this.fname = "Athma";
+            this.lname = "Ram";
+
+        }
+
+
+
+        getFullName() {
+            return this.fname + " " + this.lname;
+        }
+    }
+    var person = new Person();//Creating the instance
+
+    console.log(person.getFullName()); //calling with the instance 
+
+
+
+
+    //Inheritance in js
+    class Employee {
+        constructor() {
+            this.fname = "Yajamanam"
+            this.mname = "Athma";
+            this.lname = "Ram";
+
+        }
+        getFullName() {
+            return this.fname + " " + this.mname + " " + this.lname;
+        }
+    }
+    class Company extends Employee {
+        constructor() {
+            super();
+            //we have to use super()-> to use super class from child class
+
+        }
+    }
+
+
+    var employee = new Employee();
+    var company = new Company();
+
+    console.log(employee.getFullName());
+
+
+    const x = "Athma";
+    // const x="Ram";
+
+    console.log(x);//o/p:-Error// We can not change varible declared with const.
+
+
+    //Spread operators-> to access one object properties in another object  
+    var n = {
+        fname: "Yajamanam",
+        mname: "Athma",
+        lname: "Ram"
+
+    };
+    var a = {
+        ...n,
+        adress: "Anantapur"
+    }
+    console.log(a);
+
+
+
+
+//Varible types
+    var a = [10, 20];
+    var b;
+    b = a;
+    b = [30, 40];
+
+    console.log("a value: "+a);
+    console.log("b value: "+b);
+
+
+
+//Reference types
+    var a = { name: "Ram" };
+    var b;
+    b = a;
+    b.name = "Athma";
+    a.name = "Yajamanam";
+
+    console.log( "a value: "+ a);//returns object
+    document.write( "a value: "+ a);
+
+    document.write(a);//returns object
+    document.write(b);
+
+    document.write(b.name);//returns values
+    document.write(a.name);
+
+
+
+    console.log(a);///returns object with Property and value
+    console.log(b);
+</script>

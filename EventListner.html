@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="Username" id="textOne">
+
+    <button id="btn">Click</button>
+
+    <button id="btn1">Click One</button>
+
+
+    <script>
+        document.getElementById('btn').addEventListener("click", function () {
+            console.log(this); //getting button-function will create own scope
+        })
+
+        document.getElementById('btn1').addEventListener("click",()=> {
+            console.log(this); 
+            //getting window object-it will not create own scope.it will use parent object.window is the parent object for all.
+        })
+
+        var y = document.getElementById("textOne");
+        y.addEventListener("click", function () {
+            console.log(this);
+        })
+    </script>
+</body>
+
+</html>
